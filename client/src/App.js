@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Pets from './components/Pets/Pets';
 
