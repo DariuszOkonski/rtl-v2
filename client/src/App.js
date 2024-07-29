@@ -5,7 +5,7 @@ import Pets from './components/Pets/Pets';
 function App() {
   return (
     <div className='App'>
-      <Pets />
+      <h1>Hello</h1>
     </div>
   );
 }
