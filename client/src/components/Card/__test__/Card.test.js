@@ -14,7 +14,7 @@ const cardProps = {
   favoured: false,
 };
 
-describe.skip('Card', () => {
+describe('Card', () => {
   test('should show name of cat', () => {
     render(<Card {...cardProps} />);
 
@@ -54,7 +54,7 @@ describe.skip('Card', () => {
     render(<Card {...cardProps} favoured={true} />);
 
     expect(screen.queryByAltText(/outlined heart/i)).not.toBeInTheDocument();
-    expect(screen.queryByAltText(/filled heart/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/filled heart/i)).toBeInTheDocument();
   });
 
   test('should toggle heart status', async () => {
@@ -66,6 +66,7 @@ describe.skip('Card', () => {
     expect(screen.queryByAltText(/filled heart/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByRole('button'));
+
     expect(screen.queryByAltText(/filled heart/i)).not.toBeInTheDocument();
     expect(screen.getByAltText(/outlined heart/i)).toBeInTheDocument();
   });
