@@ -23,3 +23,5 @@ describe('Pets', () => {
     expect(cards.length).toBe(5);
   });
 });
+
+//FIX THIS TEST, TEXTENCODER IS NOT DEFINED
