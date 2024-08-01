@@ -3,6 +3,7 @@ import './Pets.css';
 import Filter from '../Filter/Filter';
 import Cards from '../Cards/Cards';
 import axios from 'axios';
+// import cats from '../../mocks/cats.json';
 
 const Pets = () => {
   const [cats, setCats] = useState([]);
