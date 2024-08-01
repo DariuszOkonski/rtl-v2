@@ -11,23 +11,16 @@ const Filter = () => {
           <option value='not favoured'>Not Favoured</option>
         </select>
       </div>
+      <div className='filter-container'>
+        <label htmlFor='gender'>Gender</label>
+        <select name='gender' id='gender' className='form-select'>
+          <option value='any'>Any</option>
+          <option value='male'>Male</option>
+          <option value='female'>Female</option>
+        </select>
+      </div>
     </div>
   );
 };
-
-// const Filter = () => {
-//   return (
-//     <div className='pet-filter-container'>
-//       <div className='filter-container'>
-//         <label htmlFor='gender'>Gender</label>
-//         <select name='gender' id='gender' className='form-select'>
-//           <option value='any'>Any</option>
-//           <option value='male'>Male</option>
-//           <option value='female'>Female</option>
-//         </select>
-//       </div>
-//     </div>
-//   );
-// };
 
 export default Filter;
