@@ -1,5 +1,6 @@
-// import { render, screen } from '@testing-library/react';
-// import Pets from '../Pets';
+import { render, screen } from '@testing-library/react';
+import Pets from '../Pets';
+import userEvent from '@testing-library/user-event';
 
 // import { rest } from 'msw';
 // import { setupServer } from 'msw/node';
@@ -25,6 +26,24 @@
 // });
 
 //FIX THIS TEST, TEXTENCODER IS NOT DEFINED
+
 describe('Pets', () => {
-  test('fix this', () => {});
+  test.skip('should filter for male cats', async () => {
+    render(<Pets />);
+    const cards = await screen.findAllByRole('article');
+    userEvent.selectOptions(screen.getByLabelText(/gender/i), 'male');
+
+    const maleCards = screen.getAllByRole('article');
+
+    // expect(maleCards).toStrictEqual([cards[1], cards[3]]);
+  });
+  test.skip('should filter for female cats', async () => {
+    render(<Pets />);
+    const cards = await screen.findAllByRole('article');
+    userEvent.selectOptions(screen.getByLabelText(/gender/i), 'female');
+
+    const maleCards = screen.getAllByRole('article');
+
+    // expect(maleCards).toStrictEqual([cards[0], cards[2], cards[4]]);
+  });
 });

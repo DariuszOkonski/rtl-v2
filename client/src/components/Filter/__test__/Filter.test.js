@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 
 describe('Filter', () => {
   test('should be able to change value of favoured select', async () => {
-    render(<Filter />);
+    render(<Filter filters={{}} setFilters={() => {}} />);
 
     const select = screen.getByLabelText(/favourite/i);
     expect(select.value).toBe('any');
@@ -17,7 +17,7 @@ describe('Filter', () => {
   });
 
   test('should be able to change value of gender select', async () => {
-    render(<Filter />);
+    render(<Filter filters={{}} setFilters={() => {}} />);
 
     const select = screen.getByLabelText(/gender/i);
 
